@@ -133,3 +133,16 @@ The action labels were created with our action annotation tool:
 The model is [SkateFormer](https://github.com/KAIST-VICLab/SkateFormer) (Do &
 Kim, ECCV 2024), vendored in `src/bikeact/model.py` and kept close to upstream
 for checkpoint compatibility. Released under the MIT License (see `LICENSE`).
+
+## Citation
+
+If you find this code or the dataset useful for your research, please consider citing the following paper:
+
+```bibtex
+@inproceedings{buettner_icpr2026_bikeactions,
+    title={{BikeActions}: An Open Platform and Benchmark for Cyclist-Centric {VRU} Action Recognition},
+    author={Buettner, Max A. and Mazumder, Kanak and Koecher, Luca and Finkbeiner, Mario and Niebler, Sebastian and Flohr, Fabian B.},
+    booktitle={International Conference on Pattern Recognition (ICPR)},
+    year={2026},
+}
+```
