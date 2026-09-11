@@ -87,19 +87,16 @@ uv run python train.py --modality b --epochs 100 \
 
 ## Checkpoints & results
 
-Two pretrained checkpoints ship in `checkpoints/`. Held-out accuracy:
+Two pretrained checkpoints ship in `checkpoints/`. Test accuracy reported in the
+SkateFormer paper:
 
-| checkpoint             | modality | val acc | test acc |
-|------------------------|----------|---------|----------|
-| `skateformer_bone.pt`  | bone     | 0.927   | 0.920    |
-| `skateformer_joint.pt` | joint    | 0.486   | 0.504    |
+| checkpoint             | modality | test acc |
+|------------------------|----------|----------|
+| `skateformer_joint.pt` | joint    | 95.38%   |
+| `skateformer_bone.pt`  | bone     | 93.85%   |
 
-**Use the bone model** (the demo defaults to it) — the bone modality (relative
-joint offsets) is far more discriminative here than raw joint positions.
-
-Training from scratch reproduces the bone checkpoint: a fresh
-`uv run python train.py --modality b --epochs 100 --seed 1` reaches **0.954 val**
-/ **0.920 test**, matching the shipped model.
+The demo defaults to the bone checkpoint. Train from scratch with
+`uv run python train.py --modality b --epochs 100 --seed 1`.
 
 ## Repository layout
 
